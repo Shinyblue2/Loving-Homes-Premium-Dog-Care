@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - Premium Dog Daycare</title>
+    <script>
+        // This config MUST stay in the HTML head to configure Tailwind before it loads
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // This makes 'text-gold' and 'hover:text-gold' work using the CSS variable
+                        'gold': 'var(--secondary-color)', 
+                        'primary': 'var(--primary-color)',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header-bg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center space-x-2 text-2xl font-bold text-primary">
+                    <i data-lucide="paw-print" class="w-7 h-7 text-gold"></i>
+                    <span class="font-extrabold tracking-tight">LOVING HOMES</span>
+                </a>
+
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Services</a>
+                    <a href="#promise" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Our Promise</a>
+                    <a href="#services" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Facilities</a>
+                    <a href="#trust" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Why Us</a>
+                    <a href="#packages" class="text-gray-700 hover:text-gold transition font-medium border-b-2 border-transparent hover:border-gold pb-0.5">Rates</a>
+                    <a href="#contact" class="text-lg font-semibold px-6 py-2 rounded-full btn-gold shadow-md">Book Trial</a>
+                </nav>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-primary p-2 rounded-md" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden header-bg border-t border-gray-100">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Services</a>
+                <a href="#promise" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Our Promise</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Facilities</a>
+                <a href="#trust" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Why Us</a>
+                <a href="#packages" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gold transition">Rates</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium btn-gold text-center mt-2">Book Trial</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero-background">
+            <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="text-center md:text-left">
+                        <p class="text-xl font-medium mb-3 text-gold uppercase tracking-wider">Where Dogs Thrive</p>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
+                            Professional, Safe & Certified Daycare
+                        </h1>
+                        <p class="mt-5 text-lg text-gray-200 max-w-lg md:max-w-none mx-auto md:mx-0">
+                            We offer more than play—we offer a structured, supervised environment with a focus on positive behavior and enrichment.
+                        </p>
+                        
+                        <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                            <a href="#contact" class="inline-block text-lg font-semibold px-8 py-3 rounded-full btn-gold">
+                                Request Free Trial
+                            </a>
+                            <a href="#packages" 
+                                class="inline-block btn-primary text-lg font-semibold px-8 py-3 rounded-full transition duration-300">
+                                View All Rates
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:block">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promise" class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">A Focus on Canine Well-being</h2>
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border-t-8" style="border-color: var(--secondary-color);">
+                    <p class="text-center text-xl italic text-gray-700 max-w-4xl mx-auto mb-6">
+                        "Our priority is to create a predictable and enriching day for every dog. We emphasize small play groups, highly trained staff, and a hygienic facility to ensure physical and mental stimulation without stress."
+                    </p>
+                    <p class="text-center text-lg font-semibold text-primary">— Loving Homes Team</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="py-16 md:py-24 section-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Commitment to Quality</h2>
+                <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-16">The core services that set Loving Homes apart from standard dog kennels.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="service-card p-6 rounded-xl text-center border-b-4 border-primary-color hover:border-gold">
+                        <i data-lucide="graduation-cap" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+                        <h3 class="text-xl font-bold mb-2 text-primary">Certified Staff</h3>
+                        <p class="text-gray-600 text-sm">Staff hold certifications in Behavior, First Aid, and CPR.</p>
+                    </div>
+
+                    <div class="service-card p-6 rounded-xl text-center border-b-4 border-primary-color hover:border-gold">
+                        <i data-lucide="users" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+                        <h3 class="text-xl font-bold mb-2 text-primary">Small Play Groups</h3>
+                        <p class="text-gray-600 text-sm">Groups are carefully matched by size, age, and play style.</p>
+                    </div>
+
+                    <div class="service-card p-6 rounded-xl text-center border-b-4 border-primary-color hover:border-gold">
+                        <i data-lucide="droplets" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+                        <h3 class="text-xl font-bold mb-2 text-primary">Hygienic Facility</h3>
+                        <p class="text-gray-600 text-sm">Hospital-grade cleaning standards and air filtration.</p>
+                    </div>
+
+                    <div class="service-card p-6 rounded-xl text-center border-b-4 border-primary-color hover:border-gold">
+                        <i data-lucide="puzzle" class="w-10 h-10 mx-auto mb-4 text-primary"></i>
+                        <h3 class="text-xl font-bold mb-2 text-primary">Enrichment Program</h3>
+                        <p class="text-gray-600 text-sm">Scheduled activities for mental stimulation, not just running.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trust" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Trusted by Owners Across HK</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-gold">
+                    <i data-lucide="quote" class="w-8 h-8 mb-4 text-gold"></i>
+                    <p class="italic text-gray-700">"Since starting daycare here, my poodle is calmer and more socialized. The staff truly cares and it feels like a second home."</p>
+                    <p class="mt-4 font-semibold text-primary">— Sarah L. (Owner of Poppy)</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-gold">
+                    <i data-lucide="quote" class="w-8 h-8 mb-4 text-gold"></i>
+                    <p class="italic text-gray-700">"The facility is spotless and I love the webcam access. Worth every penny for the peace of mind knowing my boxer is safe."</p>
+                    <p class="mt-4 font-semibold text-primary">— Ken T. (Owner of Bruno)</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-gold">
+                    <i data-lucide="quote" class="w-8 h-8 mb-4 text-gold"></i>
+                    <p class="italic text-gray-700">"The team handles everything professionally, from check-in to specific feeding instructions. Highest quality service in the area."</p>
+                    <p class="mt-4 font-semibold text-primary">— Jessica W. (Owner of Finn)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="py-16 md:py-24 section-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Select Your Premium Plan</h2>
+                <p class="text-center text-xl text-gray-200 max-w-3xl mx-auto mb-16">Flexible options tailored for occasional visits or daily regulars.</p>
+                
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 items-stretch">
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden flex flex-col p-8 shadow-xl border-t-8 border-gray-300 h-full">
+                        <span class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">Flexible</span>
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Single Day</h3>
+                        <p class="text-5xl font-extrabold mb-8 text-primary">HK$500</p>
+                        
+                        <ul class="space-y-4 text-gray-700 text-left w-full flex-grow">
+                            <li class="flex items-start"><i data-lucide="clock" class="w-5 h-5 text-gold mr-3 mt-1"></i> Up to 10 hours of supervised care</li>
+                            <li class="flex items-start"><i data-lucide="users" class="w-5 h-5 text-gold mr-3 mt-1"></i> General play group access</li>
+                            <li class="flex items-start text-gray-500"><i data-lucide="x-circle" class="w-5 h-5 text-red-500 mr-3 mt-1"></i> No priority booking</li>
+                        </ul>
+                        <button onclick="openPurchaseModal('Single Day')" class="btn-primary mt-8 w-full text-center py-3 rounded-xl font-semibold">Reserve A Day</button>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden flex flex-col p-10 shadow-2xl relative h-full transform scale-105" style="border: 4px solid var(--secondary-color);">
+                        <span class="absolute top-0 right-0 text-sm font-bold px-4 py-1 rounded-bl-xl section-dark text-white">MOST POPULAR</span>
+                        <span class="text-sm font-bold uppercase tracking-widest mb-2 text-primary">Value Pack</span>
+                        <h3 class="text-4xl font-bold mb-4 text-primary">10-Day Pack</h3>
+                        <p class="text-6xl font-extrabold mb-8 text-gold">HK$4,500</p>
+                        
+                        <ul class="space-y-4 text-gray-800 text-left w-full flex-grow">
+                            <li class="flex items-start font-semibold text-primary"><i data-lucide="tag" class="w-5 h-5 text-gold mr-3 mt-1"></i> Save HK$500</li>
+                            <li class="flex items-start font-semibold text-primary"><i data-lucide="webcam" class="w-5 h-5 text-gold mr-3 mt-1"></i> Included webcam access</li>
+                            <li class="flex items-start font-semibold text-primary"><i data-lucide="calendar-check" class="w-5 h-5 text-gold mr-3 mt-1"></i> Priority booking access</li>
+                        </ul>
+                        <button onclick="openPurchaseModal('10-Day Pack')" class="mt-8 w-full text-center py-4 rounded-xl text-xl btn-gold shadow-lg">Purchase Pack</button>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden flex flex-col p-8 shadow-xl border-t-8 border-gray-300 h-full">
+                        <span class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">Dedicated</span>
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Monthly Pass</h3>
+                        <p class="text-5xl font-extrabold mb-8 text-primary">HK$8,500</p>
+                        
+                        <ul class="space-y-4 text-gray-700 text-left w-full flex-grow">
+                            <li class="flex items-start"><i data-lucide="infinity" class="w-5 h-5 text-gold mr-3 mt-1"></i> Unlimited monthly visits</li>
+                            <li class="flex items-start"><i data-lucide="shower-head" class="w-5 h-5 text-gold mr-3 mt-1"></i> Complimentary quick bath (2/mo)</li>
+                            <li class="flex items-start"><i data-lucide="headphones" class="w-5 h-5 text-gold mr-3 mt-1"></i> Dedicated account manager</li>
+                        </ul>
+                        <button onclick="openPurchaseModal('Monthly Pass')" class="btn-primary mt-8 w-full text-center py-3 rounded-xl font-semibold">Join Membership</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Schedule Your Free Trial Day</h2>
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl border-t-8 border-primary-color">
+                <p class="text-lg text-gray-700 mb-8 text-center">Let's ensure a perfect fit! We offer a free trial day for all new dogs. Please use the 'Book Trial' button in the header or the pricing section buttons for purchasing packages.</p>
+
+                <form id="contact-form" class="space-y-6" onsubmit="handleTrialSubmit(event)">
+                    <div>
+                        <label for="trial-name" class="block text-sm font-medium text-gray-700">Owner Full Name</label>
+                        <input type="text" id="trial-name" name="trial-name" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                            aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="trial-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="trial-email" name="trial-email" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                            aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="trial-dog-name" class="block text-sm font-medium text-gray-700">Dog's Name and Breed</label>
+                        <input type="text" id="trial-dog-name" name="trial-dog-name" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                            aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="trial-message" class="block text-sm font-medium text-gray-700">Message / Preferred Trial Date</label>
+                        <textarea id="trial-message" name="trial-message" rows="4" required
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                            aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full py-3 rounded-xl text-lg font-semibold transition duration-300">
+                        Submit Trial Request
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12" style="background-color: var(--primary-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left text-white">
+            <div class="md:col-span-2">
+                <a href="#home" class="flex items-center justify-center md:justify-start space-x-2 text-2xl font-extrabold mb-4">
+                    <i data-lucide="paw-print" class="w-6 h-6 text-gold"></i>
+                    <span>Loving Homes</span>
+                </a>
+                
+                <p class="text-white text-sm">Dedicated to the highest standards of pet care.</p>
+                <p class="text-white text-sm mt-2">18 Garden Rd, Central, Hong Kong</p>
+                <div class="text-white">
+                    <p class="text-sm text-white mt-2">Call Us: (852) 1234 5678</p>
+                    <p class="text-sm text-white mt-2">Email: <a href="mailto:hello@lovinghomes.hk" class="hover:text-gold transition">hello@lovinghomes.hk</a></p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-gold">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="text-gray-200 hover:text-gold transition duration-150">Our Facilities</a></li>
+                    <li><a href="#packages" class="text-gray-200 hover:text-gold transition duration-150">Pricing & Booking</a></li>
+                    <li><a href="#trust" class="text-gray-200 hover:text-gold transition duration-150">Customer Stories</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-gold">Hours</h4>
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li>Mon - Fri: 7:30 AM - 7:00 PM</li>
+                    <li>Saturday: 8:00 AM - 5:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-300 border-t border-green-700 pt-6">
+            <span class="text-xs">&copy; 2025 Loving Homes Daycare. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <div id="purchase-modal" class="modal-overlay">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full relative shadow-2xl border-t-8 border-gold">
+            <button onclick="closePurchaseModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-2 rounded-full transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-6 text-primary text-center">Complete Your Purchase</h3>
+            
+            <form id="purchase-form" class="space-y-4" onsubmit="handlePurchaseSubmit(event)">
+                
+                <div>
+                    <label for="package-select" class="block text-sm font-medium text-gray-700">Selected Package</label>
+                    <select id="package-select" name="package" required
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-gray-50 font-bold text-primary appearance-none">
+                        <option value="Single Day">Single Day - HK$500</option>
+                        <option value="10-Day Pack">10-Day Pack - HK$4,500</option>
+                        <option value="Monthly Pass">Monthly Pass - HK$8,500</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="owner-name" class="block text-sm font-medium text-gray-700">Owner Full Name</label>
+                        <input type="text" id="owner-name" name="owner-name" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100">
+                    </div>
+                    <div>
+                        <label for="purchase-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="purchase-email" name="purchase-email" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="dog-details" class="block text-sm font-medium text-gray-700">Dog Name and Breed</label>
+                    <input type="text" id="dog-details" name="dog-details" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100">
+                </div>
+                
+                <div class="pt-2">
+                    <h4 class="text-base font-semibold text-primary mb-2">Payment Details</h4>
+                    <div>
+                        <label for="card-number" class="block text-sm font-medium text-gray-700">Credit Card Number</label>
+                        <input type="text" id="card-number" name="card-number" required pattern="\d{16}" placeholder="XXXX XXXX XXXX XXXX"
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                            maxlength="16">
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <div class="col-span-2">
+                            <label for="expiry-date" class="block text-sm font-medium text-gray-700">Expiry (MM/YY)</label>
+                            <input type="text" id="expiry-date" name="expiry-date" required pattern="\d{2}/\d{2}" placeholder="MM/YY"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                                maxlength="5">
+                        </div>
+                        <div>
+                            <label for="cvv" class="block text-sm font-medium text-gray-700">CVV</label>
+                            <input type="text" id="cvv" name="cvv" required pattern="\d{3,4}" placeholder="XXX"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-gold focus:ring-2 focus:ring-yellow-100"
+                                maxlength="4">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-gold w-full py-3 rounded-xl text-lg font-semibold mt-6">
+                    Purchase Package
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="status-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 hidden items-center justify-center p-4 status-overlay">
+        <div class="bg-white rounded-xl p-8 max-w-sm w-full text-center shadow-2xl">
+            <i id="modal-icon" data-lucide="check-circle" class="w-14 h-14 mx-auto mb-4 text-gold"></i>
+            <h3 id="modal-title" class="text-xl font-bold mb-3 text-primary">Success!</h3>
+            <p id="modal-message" class="text-gray-600 mb-6">Your request has been received.</p>
+            <button onclick="closeStatusModal()" class="btn-primary px-6 py-2 rounded-full font-medium">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

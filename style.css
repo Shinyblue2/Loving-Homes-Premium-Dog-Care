@@ -1,0 +1,106 @@
+/* Custom styles with the specific color palette */
+:root {
+    /* NEW PALETTE: #00A87F (Emerald Green), #FFD500 (Bright Gold), #FFFFFF (White), #333333 (Dark Text) */
+    --primary-color: #00A87F; /* Vibrant Emerald (Accents, Buttons, Dark Sections) */
+    --secondary-color: #FFD500; /* Bright Gold (Highlight, CTA Button) */
+    --background-color: #FFFFFF; /* Pure White (Light Background) */
+    --text-dark-color: #333333; /* Dark Charcoal (Deep text/base color) */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color); /* Changed to White */
+    color: var(--text-dark-color); /* Changed to Dark Charcoal */
+}
+.header-bg {
+    /* Header uses a clean white background for a professional look */
+    background-color: var(--background-color); 
+}
+/* Primary button uses the Emerald Green */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    background-color: #008C69; /* Darker Emerald for hover */
+    transform: translateY(-1px); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+/* Gold CTA button stands out */
+.btn-gold {
+    background-color: var(--secondary-color);
+    color: var(--text-dark-color); 
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-gold:hover {
+    background-color: #e6c100; 
+    transform: translateY(-1px);
+}
+.section-dark {
+    /* Used for contrast sections, now using the Emerald primary color */
+    background-color: var(--primary-color);
+    color: white;
+}
+.text-gold {
+    color: var(--secondary-color);
+}
+.text-primary {
+    color: var(--primary-color);
+}
+/* Custom card style for services/features */
+.service-card {
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    border-color: var(--secondary-color); /* Highlight with gold on hover */
+}
+
+/* --- NEW HERO BACKGROUND STYLE --- */
+.hero-background {
+    /* Replace the placeholder URL with your actual image path */
+    background-image: url('image2.png');
+    background-size: cover;
+    background-position: center;
+    /* Use padding for height, remove default background-color from section */
+    padding-top: 10rem; /* Adjust as needed */
+    padding-bottom: 10rem; /* Adjust as needed */
+    position: relative;
+}
+ 
+.hero-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Semi-transparent overlay to ensure text contrast */
+    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for light text */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+/* Style for the new purchase modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+/* Style for the status alert modal */
+.status-overlay {
+    z-index: 1000; /* Higher than purchase modal */
+}
